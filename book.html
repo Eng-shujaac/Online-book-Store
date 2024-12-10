@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Store App</h2>
+        <form  id="book">
+            <input type="text" placeholder="Enter ISBN" id="isbn">
+            <input type="text" placeholder="Enter Book Title" id="title">
+            <input type="text" placeholder="Book Author" id="author">
+            <select  id="category">
+                <option value="" disabled selected> Select Book</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Novels">Novels</option>
+                <option value="Science">Science</option>
+                <option value="Play">Play</option>
+            </select>
+            <input type="date" id="publishedDate">
+            <input type="submit" value="Save" class="btn">
+        </form>
+    </div>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+           background: teal;
+           scroll-behavior: smooth;
+           display: flex;
+           justify-content: space-between;
+        }
+        .container{
+            width:45%;
+            padding: 10px;
+        }
+        .container h3{
+            color: seashell;
+            font-size: 3em;
+            font-weight: bolder;
+            text-align: center;
+            text-shadow: 0px 3px 5px rgba(255,255,255,0.2);
+        }
+        .container form{
+            margin-top: 20px;
+            width: 100%;
+           padding: 25px;
+           border: 1px solid seashell;
+           border-radius: 15px;
+        }
+
+        form input:not(input[type='submit']), form select{
+            width: 100%;
+            padding-left:25px;
+            height: 45px;
+            border-radius: 15px;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        form input[type='submit']{
+            padding: 15px 35px;
+            background-color: seashell;
+            color: black;
+            text-align: center;
+            outline: none;
+            display: block;
+            margin: auto;
+        }
+        .book-list{
+            width: 45%;
+        }
+        table , td , th{
+            border: 1px solid seashell;
+            padding: 15px;
+        }
+        table{
+            width: 100%;
+            margin-top: 100px;
+            margin-right: 250px;
+        }
+        tr:nth-child(odd){
+            background-color: lightgrey;
+        }
+        i{
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+        .fa-edit{
+            background-color: darkblue;
+        }
+       .fa-trash{
+        background-color: red;
+       }
+    </style>
+</body>
+</html>
